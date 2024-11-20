@@ -2,7 +2,7 @@
 // https://nextjs.org/docs/app/getting-started/installation
 
 export const metadata = {
-  title: "Comming Soon!",
+  title: "ScrLxrd Rest API",
   description: "Comming Soon!",
 }
 
