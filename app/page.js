@@ -31,9 +31,11 @@ export default function Home() {
           A simple, free-to-use REST API without the need for an account, API
           key, or usage limits.
         </p>
-        <button className="mt-6 px-4 py-2 border border-gray-300 rounded text-gray-800 hover:bg-gray-100">
-          Explore
-        </button>
+        <Link href="/docs">
+          <button className="mt-6 px-4 py-2 border border-gray-300 rounded text-gray-800 hover:bg-gray-100">
+            Explore
+          </button>
+        </Link>
       </main>
     </div>
   );
