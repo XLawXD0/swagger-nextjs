@@ -1,22 +1,35 @@
-/*
-  { custom style }
-  { https://nyimpen.vercel.app/component/swagger-ungu.css }
-*/
+/*  { custom style }  {  }*/
+/* {    -webkit-tap-highlight-color: transparent;}.swagger-ui .topbar {     display: none; }.swagger-ui .info a[href$="swg.json"] {     display: none; }.swagger-ui .scheme-container {    background-color: transparent;}/** biar susah lu debug json nya😂 **/.swagger-ui .messages .schemaValidationMessages {    display: none; } */
 
-* {
-    -webkit-tap-highlight-color: transparent;
-}
-.swagger-ui .topbar { 
-    display: none; 
-}
-.swagger-ui .info a[href$="swg.json"] { 
-    display: none; 
-}
-.swagger-ui .scheme-container {
-    background-color: transparent;
+body {
+  background-color: #1a202c;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/** biar susah lu debug json nya😂 **/
-.swagger-ui .messages .schemaValidationMessages {
-    display: none; 
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+nav {
+  background-color: #2d3748;
+  border-bottom: 1px solid #3d4859;
+}
+
+button {
+  background-color: #3d4859;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4d5969;
 }
