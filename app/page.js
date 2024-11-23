@@ -1,70 +1,41 @@
-function createITzpirePage() {
-  const body = document.body;
+import Link from "next/link";
 
-  // Create the navigation bar
-  const nav = document.createElement("nav");
-  nav.classList.add("flex", "items-center", "justify-between", "p-4", "border-b", "border-gray-200");
-
-  const navLeft = document.createElement("div");
-  navLeft.classList.add("flex", "items-center", "space-x-2");
-
-  const icon = document.createElement("i");
-  icon.classList.add("fas", "fa-bolt", "text-xl", "text-black");
-  navLeft.appendChild(icon);
-
-  const title = document.createElement("span");
-  title.classList.add("font-semibold", "text-lg", "text-black");
-  title.textContent = "ScrLxrd API";
-  navLeft.appendChild(title);
-
-  nav.appendChild(navLeft);
-
-  const navRight = document.createElement("div");
-  navRight.classList.add("flex", "items-center", "space-x-4");
-
-  const navLinks = ["Home", "Docs"];
-  for (const link of navLinks) {
-    const a = document.createElement("a");
-    a.classList.add("text-gray-600", "hover:text-gray-800");
-    a.textContent = link;
-    a.href = "#"; // Replace with actual links if needed
-    navRight.appendChild(a);
-  }
-
-  const socialLinks = ["fab fa-github", "fas fa-sun"];
-  for (const iconClass of socialLinks) {
-    const a = document.createElement("a");
-    a.classList.add("text-gray-600", "hover:text-gray-800");
-    const icon = document.createElement("i");
-    icon.classList.add(iconClass);
-    a.appendChild(icon);
-    navRight.appendChild(a);
-  }
-
-  nav.appendChild(navRight);
-  body.appendChild(nav);
-
-  // Create the main content
-  const main = document.createElement("main");
-  main.classList.add("flex", "flex-col", "items-center", "justify-center", "h-screen");
-
-  const heading = document.createElement("h1");
-  heading.classList.add("text-3xl", "font-bold", "text-center", "text-black");
-  heading.textContent = "Welcome to ScrLxrd API";
-  main.appendChild(heading);
-
-  const description = document.createElement("p");
-  description.classList.add("text-center", "text-gray-600", "mt-4");
-  description.textContent = "A simple, free-to-use REST API without the need for an account, API key, or usage limits.";
-  main.appendChild(description);
-
-  const button = document.createElement("button");
-  button.classList.add("mt-6", "px-4", "py-2", "border", "border-gray-300", "rounded", "text-gray-800", "hover:bg-gray-100");
-  button.textContent = "Explore";
-  main.appendChild(button);
-
-  body.appendChild(main);
+export default function Home() {
+  return (
+    <div className="bg-black text-white min-h-screen flex flex-col items-center justify-center">
+      <nav className="flex items-center justify-between p-4 border-b border-gray-200 w-full">
+        <div className="flex items-center space-x-2">
+          <i className="fas fa-bolt text-xl"></i>
+          <span className="font-semibold text-lg">ScrLxrd Api</span>
+        </div>
+        <div className="flex items-center space-x-4">
+          <Link href="/">
+            <a className="text-gray-600 hover:text-gray-800">Home</a>
+          </Link>
+          <Link href="/docs">
+            <a className="text-gray-600 hover:text-gray-800">Docs</a>
+          </Link>
+        </div>
+        <div className="flex items-center space-x-4">
+          <a href="#" className="text-gray-600 hover:text-gray-800">
+            <i className="fab fa-github"></i>
+          </a>
+          <a href="#" className="text-gray-600 hover:text-gray-800">
+            <i className="fas fa-sun"></i>
+          </a>
+        </div>
+      </nav>
+      <main className="flex flex-col items-center justify-center h-screen">
+        <h1 className="text-3xl font-bold text-center">Welcome to ScrLxrd API</h1>
+        <p className="text-center text-gray-600 mt-4">
+          A simple, free-to-use REST API without the need for an account, API
+          key, or usage limits.
+        </p>
+        <button className="mt-6 px-4 py-2 border border-gray-300 rounded text-gray-800 hover:bg-gray-100">
+          Explore
+        </button>
+      </main>
+    </div>
+  );
 }
 
-// Call the function to create the page content
-createITzpirePage();
