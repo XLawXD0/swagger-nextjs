@@ -11,7 +11,7 @@ html, body {
 
 /* Body dengan background image full screen */
 body {
-  background: url('/bg.jpg') no-repeat center center fixed;
+  background: url('../public/bg.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
